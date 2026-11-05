@@ -1,0 +1,34 @@
+{
+  "data": {
+    "name": "book_service_appointment",
+    "description": "Book a service appointment or test ride at a Ridgeway store",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "slot_id": {
+          "type": "string",
+          "description": "The slot ID returned by check_service_availability"
+        },
+        "customer_name": {
+          "type": "string",
+          "description": "The customer's full name"
+        },
+        "customer_phone": {
+          "type": "string",
+          "description": "A phone number for appointment reminders"
+        },
+        "notes": {
+          "type": "string",
+          "description": "Optional details for the mechanic, such as an error code or symptom"
+        }
+      },
+      "required": ["slot_id", "customer_name", "customer_phone"]
+    }
+  },
+  "flow": "explicit",
+  "url": "{{TOOL_SERVER_URL}}/tools/book-service-appointment",
+  "headers": {
+    "x-tool-secret": "{{TOOL_SECRET}}"
+  },
+  "prompt": "Only call after check_service_availability returned slots and the user picked one. Collect the user's name and phone number first. Before calling, read back the store, service, date, and time, and wait for the user to confirm. Do NOT call without explicit confirmation. Do NOT use to cancel or reschedule."
+}

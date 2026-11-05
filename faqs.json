@@ -1,0 +1,27 @@
+{
+  "collection": {
+    "name": "Ridgeway Support FAQs"
+  },
+  "items": [
+    {
+      "question": "Do I need a license to ride a Ridgeway e-bike?",
+      "answer": "No. Class 1, 2, and 3 e-bikes don't need a license, registration, or insurance in most US states and Canadian provinces. Some areas set a minimum rider age of 16 for Class 3 bikes, so check your local rules."
+    },
+    {
+      "question": "Can I ride in the rain?",
+      "answer": "Yes. Every Ridgeway bike is rated IPX5, so rain and puddles are fine. Don't submerge the bike or pressure-wash the motor or battery."
+    },
+    {
+      "question": "Do you offer financing?",
+      "answer": "Yes. You can pay over 6, 12, or 24 months through Affirm at checkout. Rates depend on your credit, and 0% APR is available on 12-month plans for qualifying buyers."
+    },
+    {
+      "question": "How do I talk to a person?",
+      "answer": "You can call Ridgeway support at 1-800-555-0142, Monday to Friday, 8am to 8pm Eastern, or email help@ridgewaycycles.example. Replies to email take up to one business day."
+    },
+    {
+      "question": "Can I take my e-bike on a plane?",
+      "answer": "Airlines don't allow e-bike batteries over 160 Wh, and every Ridgeway battery is larger than that. You can fly with the bike if you ship the battery separately by ground or rent one at your destination."
+    }
+  ]
+}

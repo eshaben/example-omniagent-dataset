@@ -1,0 +1,19 @@
+{
+  "data": {
+    "name": "show_product",
+    "description": "Show a bike's product card on the user's screen",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "sku": {
+          "type": "string",
+          "enum": ["RW-MET2", "RW-SUM", "RW-HAUL"],
+          "description": "The bike's SKU from the product catalog"
+        }
+      },
+      "required": ["sku"]
+    }
+  },
+  "flow": "implicit",
+  "prompt": "Call automatically when you start describing or recommending a specific bike, so the user can see it. Don't announce it. Call it at most once per bike in a conversation. Do NOT call for batteries, chargers, or accessories."
+}

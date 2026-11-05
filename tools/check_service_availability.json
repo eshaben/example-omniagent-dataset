@@ -1,0 +1,28 @@
+{
+  "data": {
+    "name": "check_service_availability",
+    "description": "List open appointment slots for a service at a Ridgeway store over the next 7 days",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "store_id": {
+          "type": "string",
+          "enum": ["store_pdx", "store_den", "store_aus", "store_bkn", "store_tor"],
+          "description": "The store to check"
+        },
+        "service_type": {
+          "type": "string",
+          "enum": ["tune_up", "warranty_repair", "brake_service", "flat_repair", "battery_diagnostic", "test_ride"],
+          "description": "The service the user wants"
+        }
+      },
+      "required": ["store_id", "service_type"]
+    }
+  },
+  "flow": "explicit",
+  "url": "{{TOOL_SERVER_URL}}/tools/check-service-availability",
+  "headers": {
+    "x-tool-secret": "{{TOOL_SECRET}}"
+  },
+  "prompt": "Use when the user wants to book a service visit or test ride and you know the store and service type. Ask which store is closest to them if you don't know. Before calling, say 'One moment while I check the schedule.' Read back at most three slots. Do NOT use to answer general questions about store hours."
+}

@@ -1,0 +1,22 @@
+{
+  "data": {
+    "name": "get_order_status",
+    "description": "Look up the status, items, and tracking details of a Ridgeway order by order number",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "order_id": {
+          "type": "string",
+          "description": "The order number, formatted like RW-10482"
+        }
+      },
+      "required": ["order_id"]
+    }
+  },
+  "flow": "explicit",
+  "url": "{{TOOL_SERVER_URL}}/tools/get-order-status",
+  "headers": {
+    "x-tool-secret": "{{TOOL_SECRET}}"
+  },
+  "prompt": "Use when the user asks where their order is, when it will arrive, or for a tracking number. If the user hasn't given an order number, ask for it first. Before calling, say 'Let me look that up.' Do NOT use for returns, warranty claims, or product questions."
+}
